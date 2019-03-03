@@ -13,12 +13,12 @@ import javax.validation.Valid;
 
 @Controller
 public class StudentController {
-    @RequestMapping(value = "/student", method = RequestMethod.GET)
+    @RequestMapping(value = {"/student", "/"}, method = RequestMethod.GET)
     public ModelAndView student(){
         return new ModelAndView("student", "SpringWeb", new Student());
     }
     @RequestMapping(value = "/addStudent", method = RequestMethod.POST)
-    public String addStudent(@ModelAttribute("SpringWeb") @Valid Student student, BindingResult result,ModelMap model){
+    public String addStudent(@ModelAttribute("SpringWeb") @Valid Student student, BindingResult result, ModelMap model){
         if(result.hasErrors()){
             return "/student";
         }

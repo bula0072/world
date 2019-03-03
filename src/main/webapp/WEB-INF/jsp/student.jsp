@@ -19,10 +19,11 @@
 
     <form:label path="age">Age</form:label>
     <form:input path="age" id="age"/><br/>
+    <form:errors path="age" cssclass="error" /><br>
 
     <form:label path="id">id</form:label>
     <form:input path="id" id="id"/><br/>
-
+    <form:errors path="id" cssclass="error" /><br>
 
     <input type="submit" value="Submit"/>
 </form:form>
